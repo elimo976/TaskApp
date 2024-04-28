@@ -1,0 +1,20 @@
+<div class="container my-5">
+    <div class="w-50 mx-auto border-1 p-5">
+        <h4>Benvenuto</h4>
+        <form [formGroup]="loginFrm" (ngSubmit)="login()">
+            <h1 class="h3 mb-3 fw-normal">Accedi</h1>
+            <hr>
+
+            <div class="form-floating mb-3">
+                <input formControlName="email" type="email" class="form-control" id="floatingInput">
+                <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input formControlName="password" type="password" class="form-control" id="floatingPassword">
+                <label for=" floatingPassword">Password</label>
+            </div>
+            <button [disabled]="loginFrm.invalid" class="btn btn-primary w-100 py-3">Accedi</button>
+            <p class="mt-5 mb-3 text-body-secondary">&copy; 2024</p>
+        </form>
+    </div>
+</div>

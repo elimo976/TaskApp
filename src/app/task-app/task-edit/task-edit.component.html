@@ -1,0 +1,26 @@
+<a routerLink="../" class="btn btn-outline-secondary btn-lg">Indietro</a>
+<h4 class="mt-5">Crea un nuovo task</h4>
+<form>
+    <div class="mb-3">
+        <label for="titolo" class="form-label">Titolo</label>
+        <input type="text" class="form-control" id="titolo">
+    </div>
+    <div class="mb-3">
+        <label for="descrizione" class="form-label">Descrizione</label>
+        <textarea type="text" class="form-control" id="descrizione" rows="5"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="scadenza" class="form-label">Scadenza</label>
+        <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker" />
+            <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="urgente">
+            <label class="form-check-label" for="urgente">Urgente</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-4">Crea task</button>
+</form>
